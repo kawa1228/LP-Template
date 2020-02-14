@@ -1,0 +1,86 @@
+// 共通cssクラス
+
+// flexで中央寄せ
+.flex-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+// 囲み線付タイトル
+.box-title {
+    border: 3px solid $color-theme-black;
+    padding: 17px 37px 15px;
+    text-align: center;
+}
+
+// アイコン付申し込みボタン
+.join-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $default-font-weight;
+    font-size: 2rem;
+    height: 70px;
+    position: relative;
+    width: 100%;
+    max-width: 334px;
+    text-decoration: none;
+    text-align: center;
+
+    svg {
+        position: absolute;
+        right: 25px;
+        bottom: 25px;
+    }
+}
+
+// 鉤括弧付タイトル
+.brackets-title {
+    position: relative;
+    padding: 2% 5%;
+    box-sizing: border-box;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    text-align: center;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        width: 35px;
+        height: 35px;
+        box-sizing: border-box;
+    }
+    &::before {
+        top: 0;
+        left: 0;
+        border-top: 3px solid $color-theme-black;
+        border-left: 3px solid $color-theme-black;
+    }
+    &::after {
+        bottom: 0;
+        right: 0;
+        border-bottom: 3px solid $color-theme-black;
+        border-right: 3px solid $color-theme-black;
+    }
+
+    @include screen-mq(sp) {
+        width: 100%;
+        font-size: 2rem;
+        line-height: 3rem;
+        padding: 5% 5%;
+    }
+}
+
+// 動的に--visibleクラスを付与すると下からフェードイン
+.fade-title {
+    transform: translateY(30px);
+    transition-duration: 0.7s;
+    opacity: 0;
+
+    &--visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}

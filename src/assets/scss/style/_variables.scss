@@ -1,0 +1,28 @@
+// 共通のCSS変数
+
+// フォント
+$default-font-family:  'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+$default-font-size: 1.6rem;
+$default-font-weight: 700;
+
+// カラー
+$color-theme-white: #fff;
+$color-theme-gray: #F4F3F4;
+$color-theme-black: #333;
+$color-theme-yellow: #FBDC4F;
+
+// width
+$container-width: 94rem;
+
+// ディレクトリ
+$img-dir: '/img/';
+$svg-dir: '/svg/';
+
+//ブレイクポイント
+$break-point-list: 320px, 480px, 767px, 768px;
+$mq: (
+  'se': 'screen and (max-width: #{nth($break-point-list, 1)})',
+  'xs': 'screen and (max-width: #{nth($break-point-list, 2)})',
+  'sp': 'screen and (max-width: #{nth($break-point-list, 3)})',
+  'pc': 'print,screen and (min-width: #{nth($break-point-list, 4)})'
+) !default;
